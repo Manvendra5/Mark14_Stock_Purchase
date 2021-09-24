@@ -13,16 +13,16 @@ function calculateProfitorLoss () {
 
     if (initial > 0 && current >= 0 && qty > 0 && Number.isInteger(initial) && Number.isInteger(initial) && Number.isInteger(qty)) {
         if (initial > current) {
-            let loss = initial - current;
-            let lossPercentage = ((initial - current) * 100) / initial;
+            let loss = (initial - current) * qty;
+            let lossPercentage = (((initial - current) * 100) / initial).toFixed(2);
             outputMessage.style.color =  "#d00000";
-            outputMessage.innerText = `Your loss is ${loss} and loss percentage is ${lossPercentage.toFixed(2)}% 🤯`;
+            outputMessage.innerText = `Your loss is ${loss} and loss percentage is ${lossPercentage}% 🤯`;
         }
         else if (current > initial) {
-            let profit = current - initial;
-            let profitPercentage = ((current - initial) * 100) / initial;
+            let profit = (current - initial) * qty;
+            let profitPercentage = (((current - initial) * 100) / initial).toFixed(2);
             outputMessage.style.color = "#1DB954";
-            outputMessage.innerText = `Your profit is ${profit} and profit percentage is ${profitPercentage.toFixed(2)}% 😎`;
+            outputMessage.innerText = `Your profit is ${profit} and profit percentage is ${profitPercentage}% 😎`;
         }
         else {
             outputMessage.style.color = "#fffcf2";
