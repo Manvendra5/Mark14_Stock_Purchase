@@ -29,7 +29,7 @@ function calculateProfitorLoss () {
     }
     else {
         outputMessage.style.color = "#d00000";
-        outputMessage.innerText = "You have either entered a negative value or not given an input. Also, Number of Stocks and Initial Price cannot be zero❌";
+        outputMessage.innerText = "You have either entered a negative value or not given an input. One more thing Number of Stocks and Initial Price cannot be zero❌";
     }
 }
 
