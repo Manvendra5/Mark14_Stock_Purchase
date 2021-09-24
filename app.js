@@ -8,19 +8,21 @@ function calculateProfitorLoss () {
     let initial = Number(initialPrice.value);
     let current = Number(currentPrice.value);
     let qty = Number(numberOfStocks.value);
+    
+    if (currentPrice.value !== "" && initialPrice.value !== "" && numberOfStocks.value !== "" ){
 
     if (initial > 0 && current >= 0 && qty > 0 && Number.isInteger(initial) && Number.isInteger(initial) && Number.isInteger(qty)) {
         if (initial > current) {
             let loss = (initial - current) * qty;
             let lossPercentage = (loss / initial) * 100;
             outputMessage.style.color =  "#d00000";
-            outputMessage.innerText = `Your loss is ${loss} and loss percentage is ${lossPercentage}% 🤯`;
+            outputMessage.innerText = `Your loss is ${loss} and loss percentage is ${lossPercentage.toFixed(2)}% 🤯`;
         }
         else if (current > initial) {
             let profit = (current - initial) * qty;
             let profitPercentage = (profit / initial) * 100;
             outputMessage.style.color = "#1DB954";
-            outputMessage.innerText = `Your profit is ${profit} and profit percentage is ${profitPercentage}% 😎`;
+            outputMessage.innerText = `Your profit is ${profit} and profit percentage is ${profitPercentage.toFixed(2)}% 😎`;
         }
         else {
             outputMessage.style.color = "#fffcf2";
@@ -29,7 +31,12 @@ function calculateProfitorLoss () {
     }
     else {
         outputMessage.style.color = "#d00000";
-        outputMessage.innerText = "You have either entered a negative value or not given an input. One more thing Number of Stocks and Initial Price cannot be zero❌";
+        outputMessage.innerText = "You have either entered a negative value or... Number of Stocks or Initial Price is equal to zero❌";
+    }
+    }
+    else {
+        outputMessage.style.color = "#d00000";
+        outputMessage.innerText = "You have not provided all the inputs! ❌"
     }
 }
 
