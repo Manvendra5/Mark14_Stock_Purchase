@@ -18,7 +18,7 @@ A stock purchase app built with vanillaJS which tells the Profit/Loss, the user'
 
 Manvendra Singh Bais - [https://twitter.com/_Manvendra_/](https://twitter.com/_Manvendra_/)
 
-Project link: [https://github.com/Manvendra5/Mark15_Stock_Purchase](https://github.com/Manvendra5/Mark15_Stock_Purchase)
+Project link: [https://github.com/Manvendra5/Mark14_Stock_Purchase](https://github.com/Manvendra5/Mark14_Stock_Purchase)
 
 # Acknowledgements
 
